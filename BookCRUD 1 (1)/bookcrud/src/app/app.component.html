@@ -1,0 +1,30 @@
+<div align='center'><h1>Bookstore CRUD with Angular</h1></div>
+
+<div>
+  <table class="table" style="width: 80%">
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let book of books">
+     <td class="gape">
+        {{book.title}}
+      </td>
+      <td class="gape">
+        {{book.author}}
+      </td>
+      <td>
+        <div> <button  type="button" (click)="deleteBook(book.id)">Delete</button></div>
+       </td>
+       
+
+    </tr>
+  </table>
+</div>
+<div>
+  <p>
+    <button (click)="addBook()"> Add Book</button>
+  </p>
+</div>
+<router-outlet></router-outlet>
